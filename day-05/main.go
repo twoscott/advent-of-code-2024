@@ -34,7 +34,7 @@ func parseInputs(input, sep string) [][]int {
 	for _, line := range lines {
 		elems := strings.Split(line, sep)
 
-		enrty := make([]int, 0, len(elems))
+		entry := make([]int, 0, len(elems))
 		for _, p := range elems {
 			num, err := strconv.Atoi(p)
 			if err != nil {
@@ -42,10 +42,10 @@ func parseInputs(input, sep string) [][]int {
 				os.Exit(1)
 			}
 
-			enrty = append(enrty, num)
+			entry = append(entry, num)
 		}
 
-		entries = append(entries, enrty)
+		entries = append(entries, entry)
 	}
 
 	return entries
